@@ -1,0 +1,160 @@
+/* 
+  File: Introduction.css
+  Description:
+  This stylesheet defines the dark-themed, animated layout for the Pokémon Introduction page.
+  It uses glowing effects, gradient backgrounds, fade-in animations, and centered containers.
+*/
+
+/* === 🔄 Background Gradient Animation === */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === 👻 Fade-In Up Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === 🌌 Global Page Style === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1e1e2f, #23233a, #2e2e48, #202032);
+  /* Dark shifting background */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  /* Apply animated background */
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === 📦 Central Container Box === */
+.container {
+  background: rgba(30, 30, 30, 0.95);
+  /* Semi-transparent dark background */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  max-width: 650px;
+  width: 90%;
+  text-align: center;
+  border: 1px solid #444;
+  animation: fadeIn 1.2s ease forwards;
+  /* Fade in on load */
+  opacity: 0;
+  /* Will fade in */
+}
+
+/* === 🎴 Pokémon Logo as Background === */
+.container::before {
+  content: "";
+  background: url("/pokemon-logo.png") no-repeat center top;
+  background-size: 220px;
+  display: block;
+  height: 120px;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease 0.2s forwards;
+  /* Fade in slightly delayed */
+}
+
+/* === 🟡 Main Title === */
+h1 {
+  font-size: 30px;
+  color: #FFD700;
+  /* Gold */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* === 🧑‍🎓 Student Info Section === */
+#student-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#student-info li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#student-info .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #FFD700;
+  /* Gold dot */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* === 📄 Project Description Text === */
+#project-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bbb;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* === 🔘 Register/Login Buttons Layout === */
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* === 🎨 Button Style === */
+.btn {
+  background: linear-gradient(135deg, #ff3c57, #ff6e7f);
+  /* Red-pink gradient */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 107, 129, 0.6);
+  /* Stronger glow on hover */
+}
+
+/* === 🔄 Optional Pokémon Animation Placeholder === */
+#pokemon-animation {
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out 0.8s forwards;
+  opacity: 0;
+}

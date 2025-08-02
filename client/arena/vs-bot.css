@@ -1,0 +1,239 @@
+/* 🎨 vs-bot.css - Elegant Gradient Style for VS Bot Page */
+
+/* 🌌 Base Layout and Background */
+body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🏷️ Main Page Title */
+h1 {
+    font-size: 32px;
+    color: #FFD700 !important;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+/* 🔤 Section Title (Favorites) */
+h2 {
+    color: #050504 !important;
+    margin-top: 30px;
+    text-shadow: 0 0 10px #FFD700;
+    text-align: center;
+}
+
+/* 🧩 Favorites Pokémon Container */
+#favoritesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* 🃏 Favorite Pokémon Card Design */
+#favoritesContainer .pokemon-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    width: 140px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ✨ Hover Effect for Pokémon Cards */
+#favoritesContainer .pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #FFD700;
+    border: 2px solid #FFD700;
+}
+
+/* 📷 Pokémon Image Styling */
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 6px #fff);
+}
+
+/* ⚔️ Battle Arena Layout */
+.battle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+}
+
+/* 🎮 Player and Bot Panel Base */
+.pokemon-panel {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+/* 📊 Stats Container */
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* 🧾 Individual Stat Box */
+.stats p {
+    background: linear-gradient(to right, #333, #444);
+    color: #FFD700;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    font-size: 15px;
+    text-shadow: 0 0 3px black;
+    letter-spacing: 0.5px;
+    width: 140px;
+    text-align: center;
+}
+
+/* 🕹️ Fight Button and Result Section */
+.fight-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* 🟡 Fight Button Design */
+#fightButton {
+    padding: 12px 25px;
+    background: #FFD700;
+    color: #1e3c72;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 🟠 Hover Effect */
+#fightButton:hover {
+    background: #ffc107;
+}
+
+/* ⛔ Disabled State */
+#fightButton:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* ⏳ Countdown Text */
+#battleCountdown {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 🏁 Result Container */
+#resultContainer {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFD700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ⚠️ Result Message Box */
+.result-warning {
+    color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid #ffc107;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* 🟢 Winner Highlight */
+.winner {
+    border: 3px solid #00e676 !important;
+    box-shadow: 0 0 10px #00e676;
+}
+
+/* 🔁 Change Bot Button */
+#changeBotBtn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#changeBotBtn:hover {
+    background-color: #333;
+}
+
+/* 🚨 Alert Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* 🧱 Inner Popup Content */
+.popup-content {
+    background: #111;
+    color: #ffc107;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #ffc107;
+    max-width: 90%;
+}
+
+/* 🔘 Close Button for Popup */
+#popup-close {
+    margin-top: 15px;
+    padding: 6px 20px;
+    background-color: #ffc107;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 🙈 Utility Class to Hide Popup */
+.hidden {
+    display: none;
+}

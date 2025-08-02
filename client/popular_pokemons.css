@@ -1,0 +1,114 @@
+/* ✅ Base Layout */
+body {
+    margin: 0;
+    /* Remove default margin */
+    padding: 30px 20px;
+    /* Inner spacing for content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Clean modern font */
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* Elegant gradient background */
+    color: #fff;
+    /* Base text color */
+    min-height: 100vh;
+    /* Ensure body fills full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ✅ Page Title Styling */
+h1 {
+    font-size: 32px;
+    /* Large title font */
+    margin-bottom: 20px;
+    color: #FFD700;
+    /* Gold color for title */
+}
+
+/* ✅ Pokémon Card Grid Layout */
+#popularContainer {
+    display: grid;
+    /* Grid layout for cards */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    /* Responsive columns */
+    gap: 25px;
+    /* Space between cards */
+    width: 100%;
+    max-width: 1200px;
+    /* Limit overall width */
+    margin-bottom: 80px;
+    /* Room above footer */
+    padding: 20px;
+}
+
+/* ✅ Elegant Glowing Pokémon Card Style */
+.pokemon-card {
+    background: rgba(249, 233, 2, 0.05);
+    /* Semi-transparent background */
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    /* Soft glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    /* Start hidden */
+    animation: fadeIn 0.6s ease forwards;
+    /* Smooth entry animation */
+    cursor: pointer;
+}
+
+/* ✅ Animation for card fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Hover effect for interactivity */
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    /* Golden glow */
+}
+
+/* ✅ Pokémon Image */
+.pokemon-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ✅ Favorite Button (non-functional in this page, visual only) */
+.fav-btn {
+    background: transparent;
+    border: none;
+    color: #FFD700;
+    /* Gold heart color */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.fav-btn:hover {
+    color: #ffffff;
+}
+
+.fav-btn:active {
+    transform: scale(1.2);
+    /* Click effect */
+}
+
+/* ✅ Optional: prevent pointer on heart if you don't want it clickable */
+/* .pokemon-card .fav-btn {
+    cursor: default;
+} */

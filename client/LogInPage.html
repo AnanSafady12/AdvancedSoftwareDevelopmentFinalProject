@@ -1,0 +1,69 @@
+<!--
+  File: LoginPage.html
+  Description:
+  This is the login page for the Pokémon web app.
+  It includes:
+    - Input fields for email and password
+    - Real-time validation and error feedback
+    - A redirect link to the registration page
+  The form is submitted via JavaScript (AJAX) to avoid page reloads.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Make the page responsive on all screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title shown in the browser tab -->
+    <title>Login - Pokémon Project</title>
+
+    <!-- External CSS file for styling this login page -->
+    <link rel="stylesheet" href="LoginPage.css" />
+</head>
+
+<body>
+    <!-- 📦 Main login container -->
+    <div class="login-container">
+        <!-- 🏷️ Title -->
+        <h1>Login</h1>
+
+        <!-- 📝 Login form (handled by JS with validation) -->
+        <!-- `novalidate` disables built-in HTML validation so we can use custom validation in JS -->
+        <form id="login-form" novalidate>
+
+            <!-- 📧 Email input field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <!-- Validation error message (shown dynamically) -->
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <!-- 🔒 Password input field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                <!-- Validation error message (shown dynamically) -->
+                <small class="error-message" id="passwordError"></small>
+            </div>
+
+            <!-- ✅ Submit button -->
+            <button type="submit" class="login-btn">Login</button>
+
+            <!-- 🔁 Redirect link to registration page -->
+            <p class="redirect-link">
+                Don't have an account? <a href="/register">Register</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- 📜 JavaScript file that handles validation and submission -->
+    <script src="LoginPage.js"></script>
+</body>
+
+</html>

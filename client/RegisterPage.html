@@ -1,0 +1,80 @@
+<!--
+  File: RegisterPage.html
+  Description:
+  This page allows new users to create an account for the Pokémon project.
+  The form includes:
+    - Full Name
+    - Email
+    - Password and confirmation
+  Each input includes inline validation feedback (shown using small elements).
+  The form is handled by RegisterPage.js using AJAX (no page reload).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding and responsive design settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title shown in browser tab -->
+    <title>Register - Pokémon Project</title>
+
+    <!-- External stylesheet for form styling -->
+    <link rel="stylesheet" href="RegisterPage.css" />
+</head>
+
+<body>
+    <!-- 🌟 Main registration box -->
+    <div class="register-container">
+        <h1>Register</h1>
+
+        <!-- 📝 Registration form -->
+        <!-- `novalidate` disables browser’s built-in validation so we can handle it manually with JS -->
+        <form id="register-form" novalidate>
+
+            <!-- 👤 Full Name input -->
+            <div class="form-group">
+                <label for="firstName">Full Name</label>
+                <input type="text" id="firstName" name="firstName" required />
+                <!-- This <small> element shows validation error for Full Name -->
+                <small class="error-message" id="firstNameError"></small>
+            </div>
+
+            <!-- 📧 Email input -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <!-- 🔒 Password input -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                <small class="error-message" id="passwordError"></small>
+            </div>
+
+            <!-- 🔒 Confirm password input -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required />
+                <small class="error-message" id="confirmPasswordError"></small>
+            </div>
+
+            <!-- ✅ Submit button -->
+            <button type="submit" class="register-btn">Register</button>
+
+            <!-- 🔁 Link to Login page for existing users -->
+            <p class="redirect-link">
+                Already have an account? <a href="/login">Login</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- 📜 Script that handles validation and form submission -->
+    <script src="RegisterPage.js"></script>
+</body>
+
+</html>

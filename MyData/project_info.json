@@ -1,0 +1,13 @@
+{
+    "students": [
+        {
+            "name": "Anan Safady",
+            "id": "324914225"
+        },
+        {
+            "name": "Anan Farhat",
+            "id": "211345723"
+        }
+    ],
+    "description": "This project allows users to search for Pokémon, add favorites, and battle others in an interactive environment. Built using Node.js and Express."
+}

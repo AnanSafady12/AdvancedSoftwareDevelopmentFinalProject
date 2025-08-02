@@ -1,0 +1,42 @@
+/* 🌌 Page Background & Font */
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* Elegant blue gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Clean modern font */
+}
+
+/* 🏆 Leaderboard Title */
+h1 {
+    font-size: 32px;
+    color: #FFD700;
+    /* Gold color */
+    font-weight: bold;
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFD700,
+        0 0 20px #FFA500,
+        0 0 30px #FFA500;
+    /* Glowing gold-orange effect */
+}
+
+/* 📊 Leaderboard Table Style */
+.leaderboard-table {
+    margin-top: 15px;
+    border-radius: 12px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Clip overflowing content */
+    box-shadow: 0 0 8px #FFD700;
+    /* Subtle gold shadow */
+}
+
+/* 👤 Avatar Styling in Table */
+table img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* Circular shape */
+    box-shadow: 0 0 8px #FFD700;
+    /* Glowing effect around avatar */
+}

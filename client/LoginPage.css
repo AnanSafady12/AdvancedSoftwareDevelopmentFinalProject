@@ -1,0 +1,145 @@
+/*
+  File: LoginPage.css
+  Description:
+  Styling for the Pokémon Project login page.
+  Includes layout, form styling, input validation feedback,
+  error messages, and button hover states.
+*/
+
+/* === 🌌 Full Page Styling === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    /* Deep gradient background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full height viewport */
+}
+
+/* === 📦 Login Form Container === */
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    /* Light transparent box */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    /* Soft outer glow */
+    width: 90%;
+    max-width: 400px;
+    /* Mobile-friendly width */
+    box-sizing: border-box;
+}
+
+/* === 🏷️ Title === */
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #fdd835;
+    /* Gold-like yellow */
+}
+
+/* === 🔣 Form Input Group === */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* Label above input */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Input base styling */
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === ✨ Focus + Validation Effects === */
+input:focus {
+    outline: none;
+    border-color: #fdd835;
+    /* Yellow border on focus */
+    box-shadow: 0 0 8px #fdd83580;
+    /* Subtle glow */
+}
+
+/* Input validated as correct */
+input.valid {
+    border-color: #2ecc71;
+    /* Green */
+    background-color: #eafaf1;
+    /* Light green background */
+    color: #222;
+}
+
+/* Input validated as incorrect */
+input.invalid {
+    border-color: #e74c3c;
+    /* Red border */
+    background-color: #fdecea;
+    /* Light red background */
+    color: #222;
+}
+
+/* === ❗ Error Message Styling === */
+.error-message {
+    color: #e74c3c;
+    /* Red text */
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* === ✅ Login Button === */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fdd835;
+    /* Bright yellow */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.login-btn:hover {
+    background-color: #fbc02d;
+    /* Slightly darker yellow on hover */
+}
+
+/* === 🔁 Redirect Link (Register) === */
+.redirect-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Style the link itself */
+.redirect-link a {
+    color: #4fc3f7;
+    /* Light blue */
+    text-decoration: none;
+}
+
+.redirect-link a:hover {
+    text-decoration: underline;
+}

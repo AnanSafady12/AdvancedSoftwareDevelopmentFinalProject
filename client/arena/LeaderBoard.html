@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 🌐 Page Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🏷️ Page Title -->
+    <title>Leaderboard</title>
+
+    <!-- 🎨 Stylesheets -->
+    <link rel="stylesheet" href="/arena/Leaderboard.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- 🏆 Leaderboard Title and Table -->
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">🏆 Leaderboard</h1>
+
+        <!-- 📊 Leaderboard Table -->
+        <div class="table-responsive">
+            <table class="table table-dark table-hover leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>#</th> <!-- Position -->
+                        <th>Avatar</th> <!-- User's avatar image -->
+                        <th>Name</th> <!-- User's display name -->
+                        <th>Points</th> <!-- Total score -->
+                        <th>Success Rate (%)</th> <!-- Win ratio -->
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <!-- 🔧 JavaScript will dynamically inject rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 🔻 Footer Navigation Bar -->
+    <footer class="bg-dark text-white fixed-bottom border-top border-secondary">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-3 flex-wrap">
+
+            <!-- 🔗 Logo to Home -->
+            <a href="/home" class="d-flex align-items-center text-decoration-none">
+                <img src="/pokemon-logo.png" alt="Pokémon Logo" height="30">
+            </a>
+
+            <!-- 🔗 Navigation Links -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/favorites">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/popular_pokemons">Popular Pokémons</a>
+                </li>
+                <li class="nav-item dropdown dropup">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        Arena
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="/arena/vs-bot">VS Bot</a></li>
+                        <li><a class="dropdown-item" href="/arena/vs-human">VS Human</a></li>
+                        <li><a class="dropdown-item" href="/arena/leaderboard">Leaderboard</a></li>
+                        <li><a class="dropdown-item" href="/arena/fight_history">Fights History</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 🔘 Sign Out Button -->
+            <button id="signOutBtn" class="btn btn-dark">Sign Out</button>
+        </div>
+    </footer>
+
+    <!-- 📦 Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/arena/Leaderboard.js"></script>
+</body>
+
+</html>

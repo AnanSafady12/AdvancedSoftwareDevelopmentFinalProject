@@ -1,0 +1,62 @@
+<!-- 
+  File: Introduction.html
+  Description:
+  This is the landing page of the Pokémon web application. It introduces users to the project,
+  allows them to register or log in, and dynamically loads student information and project description
+  using JavaScript.
+
+  Features:
+  - Responsive layout using CSS (Introduction.css)
+  - Student info and project description are inserted dynamically via Introduction.js
+  - Navigation buttons for Register and Login pages
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta charset="UTF-8" />
+
+    <!-- Ensures responsive behavior on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🖼️ Pokémon logo -->
+
+
+    <!-- Sets the title of the browser tab -->
+    <title>Pokémon Project Introduction</title>
+
+    <!-- Link to external stylesheet for styling the introduction page -->
+    <link rel="stylesheet" href="Introduction.css" />
+</head>
+
+<body>
+    <!-- Main container that wraps the content -->
+    <div class="container">
+
+        <!-- 🔺 Main header introducing the Pokémon project -->
+        <h1>Welcome to the Pokémon Project</h1>
+
+        <!-- 🧑‍🎓 Student information section populated dynamically via JS -->
+        <div id="student-info"></div>
+
+        <!-- 📄 Project description section populated dynamically via JS -->
+        <div id="project-description"></div>
+
+        <!-- 🔘 Buttons for user navigation to Register and Login pages -->
+        <div id="buttons">
+            <!-- Link to the registration page (server route: /register) -->
+            <a href="/register" class="btn">Register</a>
+
+            <!-- Link to the login page (server route: /login) -->
+            <a href="/login" class="btn">Login</a>
+        </div>
+
+    </div>
+
+    <!-- 📜 External JS file that injects student info and project description -->
+    <script src="Introduction.js"></script>
+</body>
+
+</html>

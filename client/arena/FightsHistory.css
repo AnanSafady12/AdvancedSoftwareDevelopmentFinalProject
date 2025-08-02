@@ -1,0 +1,107 @@
+/* 🌌 Base Page Style */
+body {
+    margin: 0;
+    padding: 40px 20px 100px;
+    /* Add space at bottom for footer */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* Elegant gradient */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🏆 Page Header Style */
+h1 {
+    font-size: 32px;
+    color: #FFD700;
+    /* Gold title */
+    text-shadow: 0 0 10px #FFD700;
+    /* Glowing effect */
+}
+
+/* 📝 Subtitle under main header */
+#p-text {
+    font-size: 20px;
+    color: #050504 !important;
+    /* Dark text (overrides Bootstrap) */
+    margin-top: 40px;
+    text-shadow: 0 0 10px #FFD700;
+    /* Match glow with header */
+    text-align: center;
+}
+
+/* 📊 Container for table — dark glass effect */
+.table-responsive {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #FFD700;
+    /* Outer glow */
+}
+
+/* 📋 Table Layout Fixes */
+table.table {
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+/* 🔤 Table cell styling */
+table.table th,
+table.table td {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+
+/* 🟨 Table Header Styling */
+table.table th {
+    background-color: #FFD700 !important;
+    /* Override Bootstrap */
+    color: #000;
+    font-weight: bold;
+    text-shadow: none;
+    border: none;
+}
+
+/* 🎴 Table Cell Styling */
+table.table td {
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Darker rows */
+    border: 1px solid #444;
+    color: #FFD700;
+    /* Gold text */
+}
+
+/* ✨ Row Hover Animation */
+table.table-hover tbody tr:hover td {
+    background-color: rgba(255, 215, 0, 0.1);
+    /* Light gold on hover */
+    transition: 0.2s ease-in-out;
+}
+
+/* 🟢 Result-specific Colors */
+td.win {
+    color: #4CAF50;
+    /* Green for wins */
+    font-weight: bold;
+}
+
+td.lose {
+    color: #F44336;
+    /* Red for losses */
+    font-weight: bold;
+}
+
+td.tie {
+    color: #FF9800;
+    /* Orange for ties */
+    font-weight: bold;
+}
+
+/* 📦 Make sure footer stays on top of content */
+footer {
+    z-index: 10;
+}

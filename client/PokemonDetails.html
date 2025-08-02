@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Details</title>
+
+    <!-- 🔗 External CSS for styling -->
+    <link rel="stylesheet" href="/PokemonDetails.css" />
+</head>
+
+<body>
+    <!-- 🧩 Main container for Pokémon details -->
+    <div class="pokemon-details-container">
+
+        <!-- 🏷️ Pokémon Name -->
+        <h1 class="pokemon-name" id="pokemon-name"></h1>
+
+        <!-- 📸 Pokémon Image -->
+        <img id="pokemon-image" alt="Pokemon image" class="pokemon-image" />
+
+        <!-- 🧬 Type and Abilities -->
+        <div class="pokemon-meta">
+            <p><strong>Types:</strong> <span id="pokemon-types"></span></p>
+            <p><strong>Abilities:</strong> <span id="pokemon-abilities"></span></p>
+        </div>
+
+        <!-- 📊 Stats Section -->
+        <div class="pokemon-stats">
+            <h2>Stats:</h2>
+            <ul id="pokemon-stats"></ul>
+        </div>
+
+    </div>
+
+    <!-- 📜 JavaScript to populate data -->
+    <script src="/PokemonDetails.js"></script>
+</body>
+
+</html>

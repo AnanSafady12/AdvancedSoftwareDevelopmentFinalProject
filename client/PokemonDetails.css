@@ -1,0 +1,89 @@
+/* 🌌 Page Background & Base Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* Elegant gradient */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* 📦 Main Container */
+.pokemon-details-container {
+    background: rgba(0, 0, 0, 0.85);
+    /* Semi-transparent dark card */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🏷️ Pokémon Name */
+.pokemon-name {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #FFD700;
+    /* Gold title */
+}
+
+/* 🖼️ Pokémon Image */
+.pokemon-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px #fff);
+    /* White glow */
+}
+
+/* ℹ️ Types & Abilities Section */
+.pokemon-meta p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* 📊 Stats Container */
+.pokemon-stats {
+    margin-top: 25px;
+    text-align: left;
+}
+
+/* 🧾 Stats Section Title */
+.pokemon-stats h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    /* Bright yellow */
+}
+
+/* 📋 Stats List Style */
+.pokemon-stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* 📈 Individual Stat Item */
+.pokemon-stats li {
+    margin: 6px 0;
+    background: #333;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* 🎞️ Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

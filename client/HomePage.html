@@ -1,0 +1,108 @@
+<!--
+  File: HomePage.html
+  Description:
+  This is the main landing page after login for the Pokémon web app.
+  It includes:
+    - Search bar to find Pokémon by ID, name, type, or ability
+    - Display of current user (avatar + name)
+    - Online users dropdown list
+    - Pokémon search results grid
+    - Footer navigation bar with links to other parts of the app (Favorites, Arena, etc.)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🚫 Prevent caching to ensure up-to-date content on navigation -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="HomePage.css" />
+
+    <!-- Bootstrap CSS for layout, buttons, dropdowns, etc. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Page title -->
+    <title>Pokémon Search</title>
+</head>
+
+<body>
+    <!-- ✅ Top-left: Show current logged-in user avatar and name -->
+    <div class="current-user-label d-flex align-items-center">
+        <img id="currentUserAvatar" class="avatar-img me-2" alt="Avatar" />
+        <span id="currentUsername">Loading...</span>
+    </div>
+
+    <!-- 🔍 Search input field for Pokémon -->
+    <input type="text" id="txtSearch" placeholder="Search Pokémon by Id ,name, type or ability..." autocomplete="off" />
+
+    <!-- ⏳ Loader displayed while fetching results -->
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <!-- 📄 Container where search results will appear -->
+    <div id="PokémonfoundList" class="pokemon-grid"></div>
+
+    <!-- 👥 Online users dropdown menu (bottom left) -->
+    <div class="dropdown dropup online-users-dropdown position-fixed">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="onlineUsersDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            👥 Online Users
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" id="onlineUsersList" aria-labelledby="onlineUsersDropdown">
+            <li class="dropdown-item text-muted">Loading...</li>
+        </ul>
+    </div>
+
+    <!-- 🔻 Bottom Navigation Bar -->
+    <footer class="bg-dark text-white fixed-bottom border-top border-secondary">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-3 flex-wrap">
+
+            <!-- Pokémon Logo that redirects to home -->
+            <a href="/home" class="d-flex align-items-center text-decoration-none">
+                <img src="pokemon-logo.png" alt="Pokémon Logo" height="30">
+            </a>
+
+            <!-- 🔗 Navigation links -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/favorites">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/popular_pokemons">Popular Pokémons</a>
+                </li>
+
+                <!-- 🎮 Arena dropdown menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="arenaDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Arena
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="arenaDropdown">
+                        <li><a class="dropdown-item" href="/arena/vs-bot">VS Bot</a></li>
+                        <li><a class="dropdown-item" href="/arena/vs-human">VS Human</a></li>
+                        <li><a class="dropdown-item" href="/arena/leaderboard">Leaderboard</a></li>
+                        <li><a class="dropdown-item" href="/arena/fight_history">Fights History</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 🔓 Sign out button -->
+            <button id="signOutBtn" class="btn btn-dark">Sign Out</button>
+        </div>
+    </footer>
+
+    <!-- 🔌 Bootstrap JavaScript for dropdowns and components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 📜 Custom script for search, user session, UI logic -->
+    <script src="HomePage.js"></script>
+</body>
+
+</html>
